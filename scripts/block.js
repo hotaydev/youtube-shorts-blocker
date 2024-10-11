@@ -31,7 +31,7 @@ function blockShorts() {
 
 async function runWhenPageReady() {
   if (document.querySelector("body ytd-app #content")) {
-    const isBlockingShorts = await chrome.storage.local.get("isActive").then((result) => {
+    const isBlockingShorts = await currentBrowser.storage.local.get("isActive").then((result) => {
       return result.isActive ?? true;
     });
 

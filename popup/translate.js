@@ -1,4 +1,4 @@
-const currentBrowser = typeof chrome === 'undefined' ? browser : chrome;
+let currentBrowser = typeof chrome === 'undefined' ? browser : chrome;
 
 const title    = document.querySelector('.title');
 const blocking = document.querySelector('.toggle-message');

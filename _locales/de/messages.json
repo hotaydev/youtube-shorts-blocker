@@ -4,7 +4,7 @@
     "description": "Title of the extension"
   },
   "blockingShorts": {
-    "message": "Bloqueando Shorts",
+    "message": "Blockieren von Shorts",
     "description": "Toggle the extension main functionality"
   }
 }

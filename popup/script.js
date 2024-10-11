@@ -1,11 +1,13 @@
+let currentBrowser = typeof chrome === 'undefined' ? browser : chrome;
+
 document.querySelector('#toggle').addEventListener('change', async (event) => {
-  chrome.storage.local.set({ "isActive": event.target.checked });
+  currentBrowser.storage.local.set({ "isActive": event.target.checked });
   toggleLogoColor(event.target.checked);
   await reloadPage();
 });
 
 (async () => {
-  const toggleState = await chrome.storage.local.get("isActive").then((result) => {
+  const toggleState = await currentBrowser.storage.local.get("isActive").then((result) => {
     return result.isActive ?? true;
   });
 
@@ -16,7 +18,7 @@ document.querySelector('#toggle').addEventListener('change', async (event) => {
 function toggleLogoColor(value) {
   if (value) {
     document.querySelector('.logo').classList.remove('disabled');
-    chrome.action.setIcon({
+    currentBrowser.action.setIcon({
       path: {
         "16": "../images/icon-16.png",
         "32": "../images/icon-32.png",
@@ -26,7 +28,7 @@ function toggleLogoColor(value) {
     });
   } else {
     document.querySelector('.logo').classList.add('disabled');
-    chrome.action.setIcon({
+    currentBrowser.action.setIcon({
       path: {
         "16": "../images/grayscale/icon-16.png",
         "32": "../images/grayscale/icon-32.png",
@@ -38,6 +40,6 @@ function toggleLogoColor(value) {
 }
 
 async function reloadPage() {
-  const tab = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
-  chrome.scripting.executeScript({ target: { tabId: tab[0].id, allFrames: true }, func: () => window.location.reload() });
+  const tab = await currentBrowser.tabs.query({ active: true, lastFocusedWindow: true });
+  currentBrowser.scripting.executeScript({ target: { tabId: tab[0].id, allFrames: true }, func: () => window.location.reload() });
 }
