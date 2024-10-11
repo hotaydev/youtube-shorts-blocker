@@ -1,4 +1,4 @@
-let currentBrowser = typeof chrome === 'undefined' ? browser : chrome;
+var currentBrowser = typeof chrome === 'undefined' ? browser : chrome;
 
 document.querySelector('#toggle').addEventListener('change', async (event) => {
   currentBrowser.storage.local.set({ "isActive": event.target.checked });
