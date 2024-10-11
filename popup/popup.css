@@ -1,0 +1,101 @@
+.container {
+  width: 250px;
+  padding: 10px 10px 5px 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.toggle-message {
+  font-size: 14px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #ff0c0c;
+}
+
+input:checked+.slider:before {
+  transform: translateX(14px);
+}
+
+.github-link {
+  color: #333;
+  text-decoration: none;
+  transition: all ease .3s;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+  color: #232323;
+}
+
+.disabled {
+  filter: grayscale(100%);
+}
+
+.final-message {
+  font-size: 10px;
+}

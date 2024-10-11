@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Shorts Blocker",
+  "description": "description",
+  "version": "0.1.0",
+  "default_locale": "en",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/block.js"
+      ],
+      "matches": [
+        "https://www.youtube.com/*"
+      ]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{e26bb03c-8747-11ef-b0ae-3e7bf1c93a1e}",
+      "strict_min_version": "109.0"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "YT Shorts Blocker",
+    "description": "Title of the extension"
+  },
+  "thanks": {
+    "message": "Thank you for using this extension!",
+    "description": "Thanks message to the user"
+  },
+  "blockingShorts": {
+    "message": "Blocking Shorts",
+    "description": "Toggle the extension main functionality"
+  }
+}
