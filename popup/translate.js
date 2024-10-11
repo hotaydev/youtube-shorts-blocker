@@ -1,4 +1,4 @@
-var currentBrowser = typeof chrome === 'undefined' ? browser : chrome;
+// `currentBrowser` is defined in ./script.js
 
 const title    = document.querySelector('.title');
 const blocking = document.querySelector('.toggle-message');
