@@ -3,7 +3,7 @@
   <h1>YouTube Shorts Blocker</h1>
 </div>
 
-**YouTube Shorts Blocker** is a simple, open-source browser extension for [Chrome](https://chromewebstore.google.com/detail/jchbbofddpgfbaheknainnhbdonkpogf) and [Firefox](https://addons.mozilla.org/firefox/addon/youtube-shorts-blocker-hotay/) that removes YouTube Shorts from your feed. With a single toggle button, you can choose to block or allow YouTube Shorts, helping you focus on longer content.
+**YouTube Shorts Blocker** is a simple, open-source browser extension for [Chrome](https://chromewebstore.google.com/detail/youtube-shorts-blocker/jchbbofddpgfbaheknainnhbdonkpogf) and [Firefox](https://addons.mozilla.org/firefox/addon/youtube-shorts-blocker-hotay/) that removes YouTube Shorts from your feed. With a single toggle button, you can choose to block or allow YouTube Shorts, helping you focus on longer content.
 
 ## Features
 - **Toggle Button**: Quickly turn YouTube Shorts on or off.
